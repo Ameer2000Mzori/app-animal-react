@@ -1,7 +1,8 @@
 import React from 'react'
+import Card from './Card'
 
 const AnimalCard = () => {
-  return <div>AnimalCard</div>
+  return <Card />
 }
 
 export default AnimalCard

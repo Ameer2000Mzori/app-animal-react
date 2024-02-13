@@ -1,6 +1,7 @@
 import react from 'react'
+import AnimalCard from './component/AnimalCard'
 function App() {
-  return <h1>Hello World</h1>
+  return <AnimalCard />
 }
 
 export default App

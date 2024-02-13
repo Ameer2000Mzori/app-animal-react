@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-export const Card = () => {
+const Card = () => {
   const addLikeRef = useRef(null)
   const addLike = () => {
     console.log('addLike')
@@ -12,3 +12,5 @@ export const Card = () => {
     </div>
   )
 }
+
+export default Card
