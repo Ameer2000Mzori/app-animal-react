@@ -56,9 +56,11 @@ const AnimalCard = () => {
       >
         add animal
       </button>
-      {animalsObj.map((animal, index) => (
-        <Card key={index} name={animal.name} img={animal.img} />
-      ))}
+      <div className="w-[90vw] h-[90vh] flex felx-row text-start items-start justify-evenly flex-wrap gap-2 ">
+        {animalsObj.map((animal, index) => (
+          <Card key={index} name={animal.name} img={animal.img} />
+        ))}
+      </div>
     </>
   )
 }
