@@ -1,8 +1,8 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import Card from './Card'
 
 const AnimalCard = () => {
-  const animalObjs = [
+  const [animalsObj, setAnimalsObj] = useState([
     {
       name: 'Dog',
       img: 'dog.png',
@@ -11,14 +11,27 @@ const AnimalCard = () => {
       name: 'cow',
       img: 'cow.png',
     },
-  ]
+  ])
+
+  const addNewAnimal = () => {
+    const newAnimal = {
+      name: 'car',
+      img: 'car.png',
+    }
+
+    setAnimalsObj((animalsObj) => [...animalsObj, newAnimal])
+    console.log(animalsObj)
+  }
 
   return (
     <>
-      <button className="w-[100px] h-[30px] bg-black text-white">
+      <button
+        onClick={addNewAnimal}
+        className="w-[100px] h-[30px] bg-black text-white"
+      >
         add animal
       </button>
-      {animalObjs.map((animal, index) => (
+      {animalsObj.map((animal, index) => (
         <Card key={index} name={animal.name} img={animal.img} />
       ))}
     </>

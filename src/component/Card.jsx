@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import heart from '../assets/heart.svg'
 const Card = (props) => {
   const addLikeRef = useRef(null)
