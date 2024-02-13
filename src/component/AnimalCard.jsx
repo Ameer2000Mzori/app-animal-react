@@ -1,22 +1,47 @@
 import { useState } from 'react'
 import Card from './Card'
+import dog from '../assets/dog.svg'
+import cat from '../assets/cat.svg'
+import bird from '../assets/bird.svg'
+import cow from '../assets/cow.svg'
+import horse from '../assets/horse.svg'
+import gator from '../assets/gator.svg'
 
 const AnimalCard = () => {
-  const [animalsObj, setAnimalsObj] = useState([
+  const [animalsObj, setAnimalsObj] = useState([])
+
+  let animalsArr = [
     {
       name: 'Dog',
-      img: 'dog.png',
+      img: dog,
     },
     {
-      name: 'cow',
-      img: 'cow.png',
+      name: 'Cat',
+      img: cat,
     },
-  ])
+    {
+      name: 'Bird',
+      img: bird,
+    },
+    {
+      name: 'Cow',
+      img: cow,
+    },
+    {
+      name: 'Horse',
+      img: horse,
+    },
+    {
+      name: 'Gator',
+      img: gator,
+    },
+  ]
 
   const addNewAnimal = () => {
+    const ranNum = Math.floor(Math.random() * animalsArr.length)
     const newAnimal = {
-      name: 'car',
-      img: 'car.png',
+      name: animalsArr[ranNum].name,
+      img: animalsArr[ranNum].img,
     }
 
     setAnimalsObj((animalsObj) => [...animalsObj, newAnimal])
