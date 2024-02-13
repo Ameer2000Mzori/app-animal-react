@@ -19,11 +19,11 @@ const Card = (props) => {
     }
   }
   return (
-    <div>
-      <img src={props.img} alt="" />
+    <div className="w-[250px] h-[250px] relative bg-slate-700 text-center items-center flex flex-col justify-evenly">
+      <img src={props.img} alt="" className="h-[150px] w-[150px]" />
       <p>{props.name}</p>
       <img
-        className="h-[50px] w-[50px]"
+        className="h-[50px] w-[50px] absolute left-0 bottom-0"
         ref={addLikeRef}
         onClick={addLike}
         src={heart}
